@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea4683a8-e540-4339-ad8b-ce814ac65914" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UI/graphGenerator$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/UI/graphGenerator.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UI/Main$1.class" afterPath="$PROJECT_DIR$/out/production/UI/Main$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UI/Main.class" afterPath="$PROJECT_DIR$/out/production/UI/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UI/histogramGenerator$1.class" afterPath="$PROJECT_DIR$/out/production/UI/histogramGenerator$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UI/histogramGenerator.class" afterPath="$PROJECT_DIR$/out/production/UI/histogramGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UI/incomeBoard$1.class" afterPath="$PROJECT_DIR$/out/production/UI/incomeBoard$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UI/incomeBoard$2.class" afterPath="$PROJECT_DIR$/out/production/UI/incomeBoard$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UI/incomeBoard.class" afterPath="$PROJECT_DIR$/out/production/UI/incomeBoard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UI/trackBoard$1.class" afterPath="$PROJECT_DIR$/out/production/UI/trackBoard$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UI/trackBoard$2.class" afterPath="$PROJECT_DIR$/out/production/UI/trackBoard$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UI/trackBoard.class" afterPath="$PROJECT_DIR$/out/production/UI/trackBoard.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/histogramGenerator.java" afterPath="$PROJECT_DIR$/src/histogramGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/incomeBoard.java" afterPath="$PROJECT_DIR$/src/incomeBoard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/spendBoard.java" afterPath="$PROJECT_DIR$/src/spendBoard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/trackBoard.java" afterPath="$PROJECT_DIR$/src/trackBoard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/xyGenerator.java" afterPath="$PROJECT_DIR$/src/xyGenerator.java" />
     </list>
     <ignored path="UI.iws" />
     <ignored path=".idea/workspace.xml" />
