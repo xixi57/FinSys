@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 
 /**
- * Created by raoyinchen on 3/5/17.
+ * Created by Xi Wang on 3/5/17.
  */
 public class incomeBoard extends JFrame {
     private JTextField activityDateInput;
@@ -104,13 +104,7 @@ public class incomeBoard extends JFrame {
         allTypes = new JMenu("types");
         food = new JMenuItem("food");
         entertainment = new JMenuItem("entertainment");
-//        left.add(date);
-//        left.add(type);
-//        right.add(money);
-//        right.add(comment);
-//
-//        container.add(left);
-//        container.add(right);
+
         allTypes.add(food);
         allTypes.add(entertainment);
         allTypesBar.add(allTypes);
@@ -155,6 +149,7 @@ public class incomeBoard extends JFrame {
         for(String head : saveItems.keySet()) {
             System.out.println(head + ": " + saveItems.get(head));
         }
+
         return saveItems;
 
     }

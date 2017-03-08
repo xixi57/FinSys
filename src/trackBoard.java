@@ -1,14 +1,20 @@
 /**
  * Created by raoyinchen on 3/5/17.
  */
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import java.util.HashMap;
 
+
+
 /**
- * Created by raoyinchen on 3/5/17.
+ * Created by Xi Wang on 3/5/17.
  */
 public class trackBoard extends JFrame {
     private JTextField activityStartDateInput;
@@ -27,6 +33,8 @@ public class trackBoard extends JFrame {
     Container container = getContentPane();
     HashMap<String,String> saveItems = new HashMap<>();
     mainScreen backToMain;
+    public static String displayType = "All";
+    public static String displayGraph = "x-y";
 
     public trackBoard(){
 
@@ -56,11 +64,11 @@ public class trackBoard extends JFrame {
 
 
 
-        String[] typeChoices = { "entertainment","food", "gas","income","rent","others"};
+        String[] typeChoices = { "All", "entertainment","food", "gas","income","rent","others"};
 
         final JComboBox<String> cb = new JComboBox<String>(typeChoices);
 
-        String[] tableChoices = { "chart","graph", "x-y"};
+        String[] tableChoices = { "x-y","bar-chart"};
 
         final JComboBox<String> tc = new JComboBox<String>(tableChoices);
 
@@ -144,7 +152,7 @@ public class trackBoard extends JFrame {
         allTypesBar.add(allTypes);
 
 
-        container.add(panel,BorderLayout.CENTER);
+        container.add(panel);
         JButton inputButton = new JButton("done & input");
 
         inputButton.addActionListener(new ActionListener() {
@@ -156,9 +164,27 @@ public class trackBoard extends JFrame {
                 saveItems.put(activityType.getText(),String.valueOf(cb.getSelectedItem()));
 
                 JOptionPane.showMessageDialog(trackBoard.this,
-                        "You have successfully saved the items.",
+                        "Graph generated!",
                         "Login",
                         JOptionPane.INFORMATION_MESSAGE);
+
+                displayType = String.valueOf(cb.getSelectedItem());
+                displayGraph = String.valueOf(tc.getSelectedItem());
+                ChartPanel chart;
+                if(displayGraph.equals(tableChoices[0])) {
+                    chart = (ChartPanel)graphGenerator.createChartPanel();
+                } else  {
+                    chart = (ChartPanel)histogramGenerator.generateBarChart();
+                };
+
+                JPanel chartPanel = new JPanel();
+                chartPanel.add(chart);
+                chartPanel.validate();
+                container.add(chartPanel,BorderLayout.AFTER_LINE_ENDS);
+                setDefaultCloseOperation(EXIT_ON_CLOSE);
+                pack();
+                setResizable(false);
+                setVisible(true);
                 getSpendInfo();
             }
         });
@@ -192,5 +218,8 @@ public class trackBoard extends JFrame {
     public static void main(String[] args) {
         trackBoard track = new trackBoard();
 
+    }
+    public String getDisplayType() {
+        return displayType;
     }
 }
