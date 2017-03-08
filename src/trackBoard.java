@@ -64,11 +64,11 @@ public class trackBoard extends JFrame {
 
 
 
-        String[] typeChoices = { "All", "entertainment","food", "gas","income","rent","others"};
+        String[] typeChoices = { "All", "gas","income","rent","others"};//types of spending
 
         final JComboBox<String> cb = new JComboBox<String>(typeChoices);
 
-        String[] tableChoices = { "x-y","bar-chart"};
+        String[] tableChoices = { "x-y","bar-chart"};//type of charts
 
         final JComboBox<String> tc = new JComboBox<String>(tableChoices);
 
@@ -172,7 +172,7 @@ public class trackBoard extends JFrame {
                 displayGraph = String.valueOf(tc.getSelectedItem());
                 ChartPanel chart;
                 if(displayGraph.equals(tableChoices[0])) {
-                    chart = (ChartPanel)graphGenerator.createChartPanel();
+                    chart = (ChartPanel)xyGenerator.createChartPanel();
                 } else  {
                     chart = (ChartPanel)histogramGenerator.generateBarChart();
                 };
@@ -185,7 +185,7 @@ public class trackBoard extends JFrame {
                 pack();
                 setResizable(false);
                 setVisible(true);
-                getSpendInfo();
+                getTrackInfo();
             }
         });
 
@@ -206,7 +206,7 @@ public class trackBoard extends JFrame {
         setResizable(false);
         setVisible(true);
     }
-    public HashMap<String, String> getSpendInfo() {
+    public HashMap<String, String> getTrackInfo() {//where we can get/see the how we want to track: cgart type, time frame, etc
         for(String head : saveItems.keySet()) {
             System.out.println(head + ": " + saveItems.get(head));
         }

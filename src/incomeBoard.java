@@ -25,7 +25,8 @@ public class incomeBoard extends JFrame {
     private JMenuItem entertainment;
     private JMenuItem income;
     Container container = getContentPane();
-    HashMap<String,String> saveItems = new HashMap<>();
+    HashMap<String,String> saveItems = new HashMap<String,String>(){{}};
+    public static Integer totalIncome = 0;//keep track of total income
     mainScreen backToMain;
 
     public incomeBoard(){
@@ -119,7 +120,7 @@ public class incomeBoard extends JFrame {
                 saveItems.put(activityDate.getText(),activityDateInput.getText());
                 saveItems.put(activityComment.getText(),activityCommentInput.getText());
                 saveItems.put(activityMoney.getText(),activityMoneyInput.getText());
-
+                totalIncome += Integer.valueOf(activityMoney.getText());
                 JOptionPane.showMessageDialog(incomeBoard.this,
                         "You have successfully saved the items.",
                         "Login",
@@ -149,7 +150,6 @@ public class incomeBoard extends JFrame {
         for(String head : saveItems.keySet()) {
             System.out.println(head + ": " + saveItems.get(head));
         }
-
         return saveItems;
 
     }

@@ -16,7 +16,6 @@ public class Main {
                     public void actionPerformed(ActionEvent e) {
                         LoginBox loginDlg = new LoginBox(board);
                         loginDlg.setVisible(true);
-                        // if logon successfully
                         if(loginDlg.isSucceeded()){
                             btnLogin.setText("Hi " + loginDlg.getUsername() + "!");
                         }

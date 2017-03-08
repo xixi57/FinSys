@@ -7,14 +7,12 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
-import org.jfree.data.statistics.HistogramBin;
 import org.jfree.ui.ApplicationFrame;
 import org.jfree.ui.RefineryUtilities;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.HashMap;
-import java.util.Map;
+
 
 public class histogramGenerator extends ApplicationFrame
 {

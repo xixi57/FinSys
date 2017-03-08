@@ -23,7 +23,7 @@ public class spendBoard extends JFrame {
     private JMenuItem entertainment;
     private JMenuItem income;
     Container container = getContentPane();
-    HashMap<String,String> saveItems = new HashMap<>();
+    HashMap<String,String> saveItems = new HashMap<>();//keep track of each input
     mainScreen backToMain;
 
     public spendBoard(){
@@ -179,7 +179,7 @@ public class spendBoard extends JFrame {
     }
     public HashMap<String, String> getSpendInfo() {
         for(String head : saveItems.keySet()) {
-            System.out.println(head + ": " + saveItems.get(head));
+            System.out.println(head + ": " + saveItems.get(head));//this iss where we can see/get the inputs
         }
         return saveItems;
 
