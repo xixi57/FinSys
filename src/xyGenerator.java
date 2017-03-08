@@ -22,15 +22,15 @@ import java.util.HashMap;
 import javax.swing.*;
 
 /***/
-public class graphGenerator extends JFrame {
+public class xyGenerator extends JFrame {
     public static ArrayList<Integer> gas_x = new ArrayList<>(Arrays.asList(1,2,3,4,5));
-    public static ArrayList<Integer> gas_y = new ArrayList<>(Arrays.asList(2,3,4,4,5));;
-    public  static ArrayList<Integer> income_x = new ArrayList<>(Arrays.asList(1,2,3,4,5));;
-    public static ArrayList<Integer> income_y= new ArrayList<>(Arrays.asList(0,2,5,6,5));;
-    public static ArrayList<Integer> rent_x = new ArrayList<>(Arrays.asList(1,2,3,4,5));;
-    public static ArrayList<Integer> rent_y = new ArrayList<>(Arrays.asList(1,5,5,6,8));;
-    public static ArrayList<Integer> others_x = new ArrayList<>(Arrays.asList(1,2,3,4,5));;
-    public static ArrayList<Integer> others_y = new ArrayList<>(Arrays.asList(1,5,5,6,8));;
+    public static ArrayList<Integer> gas_y = new ArrayList<>(Arrays.asList(2,3,4,4,5));
+    public  static ArrayList<Integer> income_x = new ArrayList<>(Arrays.asList(1,2,3,4,5));
+    public static ArrayList<Integer> income_y= new ArrayList<>(Arrays.asList(0,2,5,6,5));
+    public static ArrayList<Integer> rent_x = new ArrayList<>(Arrays.asList(1,2,3,4,5));
+    public static ArrayList<Integer> rent_y = new ArrayList<>(Arrays.asList(1,5,5,6,8));
+    public static ArrayList<Integer> others_x = new ArrayList<>(Arrays.asList(1,2,3,4,5));
+    public static ArrayList<Integer> others_y = new ArrayList<>(Arrays.asList(1,5,5,6,8));// the display data are made up. REal dara from database should be put in.
 
 
     public static XYSeries gas = new XYSeries("gas");
@@ -43,7 +43,7 @@ public class graphGenerator extends JFrame {
     public static HashMap<String, XYSeries> table = new HashMap<>();
 
 
-    public graphGenerator() {
+    public xyGenerator() {
         super("XY Line Chart Example with JFreechart");
 
         table.put("gas",gas);
@@ -120,7 +120,7 @@ public class graphGenerator extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new graphGenerator().setVisible(true);
+                new xyGenerator().setVisible(true);
             }
         });
 
